@@ -159,7 +159,7 @@ list: [
 
 提示：`init` 函数可以针对不同 `path` 返回不同信息。
 
-初次之外，需要使用传递给构造函数的 `manager` 中的 `setTopVideo` 函数，示例如下：
+除此之外，需要使用传递给构造函数的 `manager` 中的 `setTopVideo` 函数，示例如下：
 
 ```javascript
 manager.setTopVideo({
@@ -201,7 +201,7 @@ manager.setTopVideo({
 
 另外 `mg.MURL` 补充了处理URL的功能。
 
-具体可以参考API部分。
+具体可以参考[API部分](#mg-全局变量-1)。
 
 ### 开发和调试
 
@@ -215,7 +215,7 @@ manager.setTopVideo({
 
 全局的 `console` 并不会显示在该面板上，必须使用传递给 `Provider` 构造函数的 `console` 对象，它拥有 `log` 和 `error` 两个方法。
 
-脚本中的错误会展示在输出面板中，但是不在 `pageResolver` 流程中的异步函数中的错误可能不会显示，如果需要调试，需要自行捕捉并使用 `console` 对象来展示。
+脚本中的错误会展示在输出面板中，但不在 `pageResolver` 流程中的异步函数中的错误可能不会显示，如果需要调试，需要自行捕捉并使用 `console` 对象来展示。
 
 ### 开发规范
 
@@ -376,6 +376,14 @@ href属性表示当前MURL对象的href。
 `prototype setQuery(object)`
 
 设置 `search` 参数
+
+示例：
+
+```javascript
+new MURL("https://example.com/abc","/123").setQuery({
+    a: 1
+}).href; // https://example.com/123?a=1
+```
 
 #### `class SearchParams`
 
