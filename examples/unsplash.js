@@ -1,10 +1,3 @@
-let manifest = ({
-    name: "不会动的Unsplash",
-    uniqueName: "com.mg.example.unsplash",
-    icon: "https://unsplash.com/apple-touch-icon.png",
-});
-
-
 const fetcher = {
     async photos(href, page) {
         href = new mg.MURL(href).setQuery({
@@ -113,6 +106,10 @@ class Provider {
         return { list };
     }
 }
-Provider.manifest = manifest;
+Provider.manifest = ({
+    name: "不会动的Unsplash",
+    uniqueName: "com.mg.example.unsplash",
+    icon: "https://unsplash.com/apple-touch-icon.png",
+});
 
 mg.Provider = Provider;
