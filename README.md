@@ -444,6 +444,7 @@ $("div");
 | img        | string  | 是       | -       | 图片url                                                                                                                       |
 | higherImg  | string  | -        | -       | 更高质量的图片，与img同时设置用来优化体验，先展示img，然后网络允许，当获取到higherImg后加载高质量图片。只在column==1 时生效。 |
 | title      | string  | -        | -       | 图片下文字，不设置将不显示文字                                                                                                |
+| tags       | array   | -        | -       | 字符串数组，标签，显示在图片右下角                                                                                            |
 | ratio      | number  | 是       | -       | 瀑布流使用，用于推测高度。column>1 时必需，如果没有设置，将获取第一张图片的比例，并统一使用                                   |
 | forceRatio | boolean | -        | false   | column==1 时生效，设置为true时将强制使用设置的ratio，不然可能视图片真实比例做调整                                             |
 | action     | Action  | -        | null    | 点击图片的动作 类型：[Action](#action)                                                                                        |
